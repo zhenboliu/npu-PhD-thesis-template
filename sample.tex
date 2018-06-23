@@ -1,0 +1,119 @@
+%% UTF-8
+\documentclass[twoside,UTF8,phd]{nputhesis}
+
+% \RequirePackage[%pdftex,
+%             CJKbookmarks=true,
+%             pdfstartview=FitH,
+%             bookmarksnumbered=true,
+%             bookmarksopen=true,
+%             colorlinks=true,
+%             citecolor=black,
+%             linkcolor=black,
+%             anchorcolor=black,
+%             urlcolor=black
+%             ]{hyperref}
+
+\usepackage[myhdr]{Style/artratex}% document settings
+
+\usepackage[colorlinks=true,linkcolor=black,citecolor=black,urlcolor=blue]{hyperref}%[hidelinks]
+
+
+\usepackage{lipsum}
+
+\usepackage{amssymb,amsthm,amsmath}
+\usepackage[lofdepth,lotdepth]{subfig}
+%\usepackage{subcaption} %for multiple figures with their own subcaption
+%\usepackage{subfigure} %for two figures in same line
+\usepackage{enumerate}
+\usepackage{multirow} %for table multirow
+%%  Include other user-defined commands here
+\usepackage{tikz}
+
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+\usepackage{setspace} %参考文献行距
+
+
+\newtheorem{thm}{定理}[section]
+\theoremstyle{plain}
+\newtheorem{oldthm}{旧定理}[section]
+
+\schoolno{10699}
+\classno{O.242}
+\secretlevel{公开}
+\authorno{2018999999}
+
+\title[\LaTeX\ Template for Thesis of NPU]{西北工业大学硕博士论文\LaTeX 模板}
+
+\author[San Zhang]{张\,\,三}
+\major[Mathematics]{数学}
+\supervisor[Si Li]{李四}
+\applydate[April 2018]{2018~年~4~月}
+\support{本文研究得到某某基金(编号:XXXXXXX)资助。}
+
+\begin{document}
+\makecover  % 中英文封面 
+\frontmatter
+
+% 中文摘要
+\begin{abstract}  
+    因为\TeX 具有出色的公式和图表排版功能, 所以大部分期刊都要求作者投稿时使用
+    \TeX. 学生写论文时也多用 \TeX, 所以我们制作本模板以节省写毕业论文的时间 
+    (重用之前编辑的公式和图标).
+
+    本文简要介绍西北工业大学论文模板 (nputhesis) 的实现和使用.
+
+    { % 乱码测试
+        \noindent\hrulefill\\
+        {\centerline {\it 乱码模式开启}}
+        \lipsum[1-5]
+        {\centerline{\it 乱码模式关闭}}
+        \noindent\hrulefill
+    }
+    \begin{keywords}
+        论文模板, \LaTeX, 西工大 
+    \end{keywords}
+\end{abstract}
+
+% 英文摘要
+\begin{Abstract}
+    { % some meaningless words.
+        \noindent\hrulefill\\
+        {\centerline {\it 乱码模式开启}}
+        \lipsum[1-4]
+        {\centerline{\it 乱码模式关闭}}
+        \noindent\hrulefill
+    }
+    \begin{Keywords}
+        Thesis Template, \LaTeX, NPU
+    \end{Keywords}
+\end{Abstract}
+
+% 目录
+\tableofcontents 
+
+\mainmatter  % 
+
+\include{chapter_example} %
+
+%\cleardoublepage%
+\appendix
+\renewcommand\theequation{\Alph{chapter}-\arabic{equation}}
+\input{appendixa}
+
+
+\backmatter
+\begin{spacing}{1}  % change the number to adjust the spacing
+\bibliographystyle{nputhesis}
+\bibliography{ref}
+\end{spacing} 
+
+\Thanks
+This is a thanks.
+
+\Work
+% TODO 如何直接引用使参考文献的内容显示在这里
+
+\statement
+\end{document}

@@ -1,0 +1,47 @@
+\chapter{nputhesis 简介}
+
+\section{\TeX 和 \LaTeX 介绍}
+关于 \TeX 和 \LaTeX 请参考 \cite{Knuth1986,Lamport1994,Liu2013}, 其中 \cite{Liu2013} 最适合入门.  
+
+测试参考文献引用\cite{Zhang2018}。
+
+\section{nputhesis 依赖}
+如下表格给出了测试编译通过的环境
+\begin{table}[h]
+	\caption{测试环境\cite{Liu2013}}
+	\centering
+	\begin{tabular}{cccc}
+		\toprule
+		操作系统    & \TeX 系统   & 版本  & 引擎\\
+		\midrule
+		Windows 10  & TeXLive     & 2017  & xelatex\\
+		\bottomrule
+	\end{tabular}
+\end{table}
+\lipsum[9-15]
+\section{插入图片}
+\lipsum[1-3]
+\begin{figure}
+	\centering
+	\includegraphics[width=0.3\textwidth]{figures/fig1-1.pdf}
+	\includegraphics[width=0.3\textwidth]{figures/fig1-1.pdf}
+	\caption{样例图}
+\end{figure}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.5\textwidth]{figures/fig2.pdf}
+	\caption{另一个图}
+\end{figure}
+\lipsum[4-6]
+\section{定理环境}
+\lipsum[1]
+\begin{thm}
+	这里是定理环境使用 `nputheorem' 格式.
+\end{thm}
+\lipsum[2]
+\begin{oldthm}
+	这里是 `amsthm' 默认的定理环境, 使用 `plain' 格式.
+\end{oldthm}
+\lipsum[3]
+
+
